@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Project I</title>
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+    <meta name="Project I" content="Project I web site">
+  <body>
+    <script type="text/javascript" src="path/to/jQuery.js"></script>
+    <div class="nav">
+      <img class="nav-logo" src="img/logo.svg"></img>
+      <!--<div class="nav-right-item">
+        <div class="topnav">
+          <img class="active nav-home" target=_blank title="Home" src="img/home.svg"></img>
+          <img class="nav-friend" target=_blank title="Friend" src="img/friend.svg" onclick="alert('개발중')"></img>
+          <img class="nav-chat" target=_blank title="Chat" src="img/chat.svg" onclick="alert('개발중')"></img>
+          <img class="nav-setting" target=_blank title="Setting" src="img/setting.svg" onclick="alert('개발중')"></img>
+          <img class="nav-android" target=_blank title="Android version 0.0.15" src="img/android.svg" onclick="window.open('https://drive.google.com/file/d/1FLGLoNEdTmLp25-lf_Xfh7_T4S2C9KP2/view?usp=sharing')"></img>
+        </div>
+      </div>-->
+    </div>
+    <div class="main">
+      <div class="title">
+        Project I
+      </div>
+      <div class="subtitle">
+        Welcome to Project I
+      </div>
+      <div class="projecti-program">
+        <div class="projecti-program-item">
+          <!--<div class="projecti-program-item-title">
+            Dollar
+          </div>-->
+          <div class="projecti-program-item-exchangeRate">
+            italk
+          </div>
+          <div class="projecti-program-item-detail">
+            Basic SNS (Chat, Post, Group...)
+          </div>
+          <button class="projecti-program-item-button">
+            Download
+          </button>
+        </div>
+        <div class="projecti-program-item">
+          <!--<div class="projecti-program-item-title">
+            Dollar
+          </div>-->
+          <div class="projecti-program-item-exchangeRate">
+            iPlan
+          </div>
+          <div class="projecti-program-item-detail">
+            Share mission to group member
+          </div>
+          <button class="projecti-program-item-button">
+            Download
+          </button>
+        </div>
+        <div class="projecti-program-item-next">
+          <div class="projecti-program-item-title-next">
+            What is next?
+          </div>
+        </div>
+      </div>
+      <p class="copyright" style="color: white; margin-top: 20px;">
+        Copyright ©<script style="user-select: auto;">document.write(new Date().getFullYear());</script>
+        <a>return</a>
+      </p>
+    </div>
+    <script>
+      $.getJSON("https://api.exchangeratesapi.io/latest?base=KRW", function(data) {   
+        priceInMXN = data.USD;
+        document.getElementById("content").innerHTML = priceInMXN;
+      });
+    </script>
+  </body>
+<html>
